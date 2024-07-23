@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 애니메이션을 정의할때 사용되는 기능 */
+        @keyframes trans1 {
+            /* 시작할떄  */
+            from{
+                background-color: green;
+                border: 1px solid black; 
+            }
+            /* 끝날떄 */
+            to{
+                background: yellow;
+                border-radius: 50px;
+                transform: rotateZ(360deg);
+                border: 3px solid red;
+            }
+        }
+        .div1{
+            margin: 100;
+            width: 100px;
+            height: 100px;
+            background: gray;
+            animation-name: trans1;
+            animation-duration: 5s;
+            /* 애니메이션의 방향을 교대로 반전하여 실행
+            (첫번째 반복은 역방향, 두번째 반복은 정방향) */
+            animation-direction: alternate-reverse;
+        }
+    </style>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <div class="div1"></div>
+</body>
+</html>
